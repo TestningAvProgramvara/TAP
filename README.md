@@ -1,4 +1,4 @@
-# TestningAvProgramvara
+# Testning Av Programvara
 Kära elever!
 
 Här kommer jag att lägga upp det material som vi har gått igenom under kursensgång. 
