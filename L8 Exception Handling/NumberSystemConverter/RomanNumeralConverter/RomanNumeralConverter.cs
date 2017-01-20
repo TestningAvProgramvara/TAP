@@ -14,7 +14,7 @@ namespace NumberSystemConverter
     }
     #endregion
     #region Roman Numerals - Seven symbols(enum RomanNumeralsType) with respective value.
-    enum RomanNumeralsType
+    public enum RomanNumeralsType
     {
         M = 1000,
         CM = 900,
@@ -34,7 +34,7 @@ namespace NumberSystemConverter
     public class RomanNumeralConverter
     {
         // Readonly - The variable assigned with the readonly operator can only be changed inside the declaration or in the constructor
-        private List<RomanNumeralPair> romanNumeralList;
+        List<RomanNumeralPair> romanNumeralList;
 
         public RomanNumeralConverter()
         {

@@ -36,14 +36,13 @@ namespace NumberSystemConverter
 
                 Console.WriteLine("Please enter an integer value OR roman numeral to be converted...");
                 string userInput = Console.ReadLine();
-                if(userInput.All(c => c >= '0' && c <= '9') && userInput != "") { 
+                string[] eiwa = { "DM" , "LM", "IM", "XM", "VM" , "LD", "XD" , "VD", "ID", "LC", "VC", "IC", "VL" , "IL", "IIII" };
+
+
+                if (userInput.All(c => c >= '0' && c <= '9') && userInput != "") {
                     Console.WriteLine(userInput + " = " + converter.ConvertToRomanNumeral(int.Parse(userInput)));
-                }else if(userInput.All(c => c == 'M' || c == 'D' || c == 'C' || c == 'L' || c == 'X' || c == 'V' || c == 'I') && (
-                         userInput != "DM" && userInput != "LM" && userInput != "IM" && userInput != "XM" && userInput != "VM" &&
-                         userInput != "LD" && userInput != "XD" && userInput != "VD" && userInput != "ID" &&
-                         userInput != "LC" && userInput != "VC" && userInput != "IC" &&
-                         userInput != "VL" && userInput != "IL" && userInput != "IIII"))
-                   
+                } else if (userInput.All(c => c == 'M' || c == 'D' || c == 'C' || c == 'L' || c == 'X' || c == 'V' || c == 'I') &&
+                          !eiwa.Any(c => userInput.Contains(c)))
                 {
                     Console.WriteLine(userInput + " = " + converter.ConvertFromRomanNumeral(userInput.ToCharArray().Select(c => c.ToString()).ToArray()));
                 }
